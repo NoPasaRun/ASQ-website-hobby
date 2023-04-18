@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="public">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/normalise.css">
+    <link rel="stylesheet" href="/static/styles/index.css">
+    <link rel="stylesheet" href="/static/styles/media.css">
+    <link rel="shortcut icon" type="image/png" sizes="125x125" href="/static/assets/images/backgrounds/shortcut.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/static/scripts/modules/phone-mask.js"></script>
+    <title>ASQ - IT-company</title>
+  </head>
+  <body class="hide-content">
+    <header class="header">
+      <div class="wrapper wrapper_column">
+        <nav class="header__nav header__nav_margin">
+          <div class="logo">
+              <img class="logo-image" src="/static/assets/images/backgrounds/Light-logo.png" alt="Logotype">
+          </div>
+          <ul class="nav__menu nav__menu_margin">
+            <li class="menu__item menu__item_action">
+              <a href="#about-us" class="menu__local-link">About us</a>
+            </li>
+            <li class="menu__item menu__item_action">
+              <a href="#products" class="menu__local-link">Products</a>
+            </li>
+            <li class="menu__item menu__item_action">
+              <a href="#contact-us" class="menu__local-link">Contact us</a>
+            </li>
+            <li class="menu__item menu__item_action">
+              <a href="#developers" class="menu__local-link">Developers</a>
+            </li>
+            <li class="menu__item menu__item_action">
+              <a href="#join-us" class="menu__local-link">Join us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__intro-section">
+          <div class="intro-section__heading intro-section__headibg_transition intro-section__heading_top">
+            Bold IT solutions<br>
+            <span class="last-line">Hire us to solve any case</span>
+          </div>
+          <div class="intro-section__heading intro-section__headibg_transition intro-section__heading_bottom">
+            Highlight your business<br>
+            <span class="last-line">with high-tech development</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section id="contact-form" class="section__contact-form">
+        <div class="wrapper">
+          <div class="contact-form">
+            <form action="/" class="form">
+              <div class="form-wrapper">
+                <div class="form-block">
+                  <input class="form__field" name="name" placeholder="Type your name" type="text">
+                </div>
+                <div class="form-block">
+                  <ul class="form__select-field form-country__select-field form__select-field_hidden" onclick="toogleVisibility(this)">
+                    <li class="form__select-option">Select your country</li>
+                    <li class="form__select-option" value="Russia">Russia</li>
+                    <li class="form__select-option" value="Ukraine">Ukraine</li>
+                    <li class="form__select-option" value="Belarus">Belarus</li>
+                    <li class="form__select-option" style="height: 0; overflow: hidden">Select your country</li>
+                  </ul>
+                  <span class="form__arrow" onclick="toogleVisibility('.form-country__select-field')"></span>
+                </div>
+                <div class="form-block">
+                  <span class="form__arrow form__phone-arrow" onclick="toogleVisibility('.form-phone__select-field')"></span>
+                  <ul class="form__select-field form-phone__select-field form__select-field_hidden" onclick="toogleVisibility(this)">
+                    <li class="form__select-option">+7</li>
+                    <li class="form__select-option" value="+7">+7</li>
+                    <li class="form__select-option" value="+12">+12</li>
+                    <li class="form__select-option" value="+88">+88</li>
+                    <li class="form__select-option" style="height: 0; overflow: hidden">+7</li>
+                  </ul>
+                  <input class="form__field form__field_font-smaller" id="phone" name="phone" placeholder="(___) ___-__-__" type="text">
+                </div>
+                <div class="form-block form-block_cursor">
+                  <label class="form__field-placeholder" for="task-file">Select file with task</label>
+                  <input class="form__field" id="task-file" name="file" style="display: none;" type="file">
+                  <label class="form__field-label form__field-label_marker" for="task-file"></label>
+                </div>
+                <button class="send-form__button" value="Send form" type="button">
+                  Send form
+                </button>
+              </div>
+              <script>
+                $('#phone').mask('(999) 999-99-99');
+                const selectors = new Array(".form-phone__select-field", ".form-country__select-field")
+
+                function toogleVisibility(selector) {
+                  $(selector).toggleClass('form__select-field_hidden')
+                }
+
+                $(document).ready(() => {
+                  selectors.forEach((selector) => {
+                    let select_field = document.querySelector(selector)
+                    let select_input = select_field.querySelector(".form__select-option")
+
+                    select_field.querySelectorAll(".form__select-option").forEach((select_option) => {
+                      $(select_option).click(function(event) {
+                        $(select_input).attr("value", $(this).attr("value"))
+                        $(select_input).text($(this).attr("value"))
+                      })
+                    })
+                  })
+                })
+              </script>
+            </form>
+          </div>
+          <div class="info-bars">
+            <details class="info-bar" open>
+              <summary class="info-bar__pointer">
+                <span class="info-bar__pointer-name"></span>
+              </summary>
+              <div class="info-bar__content section_filter">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                At repellendus, dicta, ipsum placeat quae dignissimos quia
+                atque odio repudiandae est quibusdam illo nobis eligendi et
+                ipsam pariatur, molestiae ad explicabo?
+              </div>
+            </details>
+            <details class="info-bar">
+              <summary class="info-bar__pointer">
+                <span class="info-bar__pointer-name"></span>
+              </summary>
+              <div class="info-bar__content section_filter">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                At repellendus, dicta, ipsum placeat quae dignissimos quia
+                atque odio repudiandae est quibusdam illo nobis eligendi et
+                ipsam pariatur, molestiae ad explicabo?
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section id="developers" class="section__developers section_filter">
+        <div class="wrapper wrapper_column">
+          <div class="section__description developers__decription">
+            <h1 class="section__heading">Developers</h1>
+            <div class="section__content">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Corporis reprehenderit id in temporibus consequatur deserunt
+              consectetur facere minima illo impedit, illum odit amet voluptas,
+              rem quod modi doloribus! Tempore, expedita.
+            </div>
+          </div>
+          <div class="swiper-developers section__slider">
+            <div class="swiper-wrapper slider__list">
+              {% for _ in [1, 2, 3, 4, 5, 6] %}
+                {% include "dev_card.html"%}
+              {% endfor %}
+            </div>
+            <div class="swiper-scrollbar slider__scroller b"></div>
+          </div>
+        </div>
+      </section>
+      <section id="about-us" class="section__about-us">
+        <div class="wrapper wrapper_column">
+          <div class="section__description about-us__description section__description_flex">
+            <div class="wrapper-description wrapper-description__about-us">
+              <h1 class="section__heading">About us</h1>
+              <div class="section__content section__content_big-line-h">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis reprehenderit id in temporibus consequatur deserunt
+                consectetur facere minima illo impedit, illum odit amet voluptas,
+                rem quod modi doloribus! Tempore, expedita.
+              </div>
+            </div>
+            <img class="section__image" src="/static/assets/images/backgrounds/illustration-1.jpg" alt="Illustration-1">
+          </div>
+          <nav class="section__action-nav">
+            <ul class="action-nav__list">
+              <li class="action-nav__item">
+                <a class="action-nav__link">Send us tech-task</a>
+              </li>
+              <li class="action-nav__item">
+                <span class="action-nav__icon action-nav__icon_send"></span>
+              </li>
+              <li class="action-nav__item">
+                <a class="action-nav__link">Wait a bit before our call</a>
+              </li>
+              <li class="action-nav__item">
+                <span class="action-nav__icon action-nav__icon_phone"></span>
+              </li>
+              <li class="action-nav__item">
+                <a class="action-nav__link">Get the solution!</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section id="contact-us" class="section__contact-us">
+        <div class="wrapper wrapper_spread-and-center">
+          <div class="section__description contact-us__description">
+            <div class="wrapper-description wrapper-description__contact-us">
+              <h1 class="section__heading contact-us__heading">Contacts</h1>
+              <ul class="section__contact-list">
+                <li class="contact-list__item">
+                  <a class="contact-list__link contact-list__link_phone" href="tel:+79999999999">Phone: +7(999)999-99-99</a>
+                </li>
+                <li class="contact-list__item">
+                  <a class="contact-list__link contact-list__link_vk" href="https://vk.com/fake-page">VK: https://vk.com/fake-page</a>
+                </li>
+                <li class="contact-list__item">
+                  <a class="contact-list__link contact-list__link_email" href="mailto:pochta@gmail.com">Email: pochta@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="products" class="section__products section_filter">
+        <div class="wrapper wrapper_column">
+          <div class="section__description products__description">
+              <h1 class="section__heading">Products</h1>
+              <div class="section__content">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis reprehenderit id in temporibus consequatur deserunt
+                  consectetur facere minima illo impedit, illum odit amet voluptas,
+                  rem quod modi doloribus! Tempore, expedita.
+              </div>
+          </div>
+          <div class="swiper-products section__slider">
+            <div class="swiper-wrapper slider__list">
+              {% for _ in [1, 2, 3, 4, 5, 6] %}
+                {% include "prod_card.html"%}
+              {% endfor %}
+            </div>
+            <div class="swiper-scrollbar slider__scroller"></div>
+          </div>
+        </div>
+      </section>
+      <section id="join-us" class="section__join-us">
+        <div class="wrapper wrapper_column">
+          <div class="section__description join-us__description section__description_flex">
+            <h1 class="section__heading section__heading_dark-theme-and-low-size">Join us</h1>
+            <div class="section__content">
+              <strong class="section__description-text">
+                describe your abilities,<br>
+                leave links and etc.
+              </strong>
+            </div>
+          </div>
+          <div class="join-us__form">
+            <form action="/" class="form form_flex">
+              <div class="form__top-wrapper">
+                <div class="form__block form-block_width form__block_background form__block_margin">
+                  <textarea class="form__field" name="text-data" placeholder="Type here"></textarea>
+                </div>
+                <ul class="action-point__list">
+                  <li class="action-point__item">
+                    <a href="#" class="action-point__link">
+                      Send us your portfolio
+                    </a>
+                    <span hidden>Send us your<br> portfolio</span>
+                    <span class="action-point__icon"></span>
+                  </li>
+                  <li class="action-point__item">
+                    <a href="#" class="action-point__link">
+                      Connect with customer
+                    </a>
+                    <span hidden>Connect with<br> customer</span>
+                    <span class="action-point__icon"></span>
+                  </li>
+                  <li class="action-point__item">
+                    <a href="#" class="action-point__link">
+                      Get your fast money
+                    </a>
+                    <span hidden>Get your<br> fast money</span>
+                    <span class="action-point__icon"></span>
+                  </li>
+                </ul>
+                <script>
+                  function getWordBeforeWrap(el) {
+
+                    let current = $(el)
+                    let words = current.text().split(' ');
+                    let word;
+
+                    current.text(words[0]);
+                    let height = current.height();
+
+                    for(let i = 1; i < words.length; i++){
+                        current.text(current.text() + ' ' + words[i]);
+
+                        if(current.height() > height){
+                            height = current.height();
+                            word = words[i-1]
+                        }
+                    }
+                    return word
+                  }
+
+                  function setObserver(element) {
+                    const resizeObserver = new ResizeObserver(() => {
+                      let word = getWordBeforeWrap(element)
+                      let text;
+
+                      if (word !== undefined) {
+                        console.log(word)
+                        text = element.innerText.replace(word, word + "<br>")
+                      }
+
+                      if (text !== undefined) {
+                        element.innerHTML = text
+                      }
+                      element.prevHeight = element.clientHeight
+                    });
+
+                    resizeObserver.observe(element);
+                  }
+
+                  $(document).ready(() => {
+                    const links = document.querySelectorAll(".action-point__link")
+
+                    links.forEach((link) => {
+                      setObserver(link)
+                    })
+                  })
+                </script>
+              </div>
+              <div class="action-point action-point_margin">
+                <div class="form__block form-block_width form-block_border-and-color">
+                  <label class="form__field-placeholder" for="portfolio">Select file with works</label>
+                  <input class="form__field" id="portfolio" name="file" style="display: none;" type="file">
+                  <label class="form__field-label" for="portfolio"></label>
+                </div>
+                <label class="form__field-label" for="join-us-button">AND</label>
+                <input class="form__submit-button" id="join-us-button" type="submit" value="Join us">
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="header__nav footer_nav footer__nav_margin">
+          <div class="logo">
+            <img class="logo-image" src="/static/assets/images/backgrounds/Dark-logo.png" alt="Logotype">
+          </div>
+          <ul class="nav__menu">
+            <li class="menu__item">
+              <a href="#" class="menu__local-link menu__local-link_dark-color">Politics</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__local-link menu__local-link_dark-color">Author rights</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__local-link menu__local-link_dark-color">User permissions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="audio-player" style="display: none;">
+      <audio id="synthwave-audio-player" autoplay></audio>
+      <button class="audio-player__button">Play</button>
+    </div>
+    <span class="cursor"></span>
+    <script src="/static/scripts/cursor.js"></script>
+    <script src="/static/scripts/index.js"></script>
+    <script src="/static/scripts/slider.js"></script>
+    <script>
+      sendPlaySoundOrGetHeaders()
+      // const audio_player = document.querySelector("#synthwave-audio-player")
+      // const audio_player_button = document.querySelector(".audio-player__button")
+
+      // if (play_sound) {
+      //   LaunchRandomAudio()
+      // }
+    </script>
+  </body>
+</html>

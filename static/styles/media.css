@@ -1,0 +1,232 @@
+@media (min-width: 1940px) {
+  .header {
+    position: static;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .intro-section__heading::first-letter {
+    font-size: 64px;
+  }
+
+  .intro-section__heading {
+    font-size: 40px;
+  }
+
+  .last-line {
+    font-size: 24px;
+  }
+
+  .main {
+    margin-top: 0;
+  }
+
+  .contact-form  {
+    border: 100px solid transparent;
+  }
+
+  .info-bar__content {
+    font-size: 19px;
+  }
+
+  .action-nav__item {
+    font-size: 34px;
+  }
+
+  .action-point__link {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1600px) {
+
+  /* Adaptive general styles */
+
+  .section__heading {
+    font-size: 6vw;
+  }
+
+  .section__content {
+    font-size: 1.25vw;
+  }
+
+  /* Adaptive header manu navigator */
+
+  .nav__menu_margin {
+    margin-right: 0;
+  }
+
+  .menu__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .menu__local-link {
+    font-size: 1.8vw;
+  }
+
+  /* Adaptive intro text */
+
+  .intro-section__heading_top {
+    margin-right: 0;
+  }
+
+  .intro-section__heading {
+    font-size: 1.6vw;
+    width: 40%;
+  }
+
+  .last-line {
+    font-size: 0.7em;
+  }
+
+  /* Adaptive contact form */
+
+  .contact-form {
+    margin-left: 0;
+  }
+
+  .form-wrapper {
+    padding-left: 40px;
+    padding-top: 100px;
+  }
+
+  .form-block {
+    width: 458px;
+  }
+
+  .form-block_mb:nth-child(3) {
+    margin-bottom: 100px;
+  }
+
+  .form-block_mb:nth-child(4) {
+    margin-bottom: 50px;
+  }
+
+  /* Adaptive info bars */
+
+  .info-bars {
+    margin-top: 5%;
+  }
+
+  /* Adaptive About us section */
+
+  .section__content_big-line-h {
+    font-size: 1.5vw;
+  }
+
+  /* Adaptive developers cards */
+
+  .slider__item {
+    min-width: 365px;
+  }
+
+  /* Adaptive contact list */
+
+  .contact-us__description::before,
+  .contact-us__description::after {
+    display: flex;
+    flex-grow: 2;
+    width: 0;
+  }
+
+  .contact-list__link {
+    font-size: 1.8vw;
+  }
+
+  /* Adaptive Join us */
+
+  .section__description-text {
+    font-size: 2.25vw;
+    letter-spacing: 5px;
+  }
+
+  .form-block_width {
+    min-width: 535px;
+  }
+
+}
+
+@media (max-width: 1280px) {
+
+  /* Adaptive general styles */
+
+  .developers__decription > .section__content,
+  .products__description > .section__content,
+  .section__content {
+    letter-spacing: 2px;
+    line-height: 2em;
+  }
+
+  .logo-image {
+    width: 100px;
+  }
+
+  /* Adaptive contact form */
+
+  .form-block > * {
+    font-size: 22px;
+  }
+
+  .form__select-field {
+    height: 24px;
+  }
+
+  .send-form__button {
+    font-size: 30px;
+  }
+
+  /* Adaptive info bars */
+
+  .info-bar__content {
+    font-size: 10px;
+  }
+
+  /* Adaptive About us */
+
+  .about-us__description {
+    width: 67%;
+  }
+
+  .wrapper-description__about-us {
+    margin-left: 0;
+    margin-bottom: 81px;
+  }
+
+  .wrapper-description__about-us > .section__heading {
+    margin-bottom: 85px;
+  }
+
+  .about-us__description {
+    flex-direction: column;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .section__about-us > .wrapper_column {
+    flex-direction: row;
+  }
+
+  .section__image {
+    margin: 0;
+  }
+
+  .action-nav__list {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding-top: 50%;
+  }
+
+  .action-nav__item:has(.action-nav__icon) {
+    width: 80px;
+  }
+
+  .action-nav__item {
+    text-align: center;
+  }
+
+  .form-block_border-and-color {
+    border-radius: 40px;
+  }
+
+}
