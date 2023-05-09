@@ -53,4 +53,4 @@ def send_audio():
     
 
 if __name__ == "__main__":
-    app.run("127.0.0.1", 5500, debug=True)
+    app.run("192.168.31.52", 8000, debug=True)

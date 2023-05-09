@@ -19,9 +19,10 @@
       <div class="wrapper wrapper_column">
         <nav class="header__nav header__nav_margin">
           <div class="logo">
-              <img class="logo-image" src="/static/assets/images/backgrounds/Light-logo.png" alt="Logotype">
+            <img class="logo-image" src="/static/assets/images/backgrounds/Light-logo.png" alt="Logotype">
           </div>
-          <ul class="nav__menu nav__menu_margin">
+          <img class="nav__burger" src="/static/assets/images/icons/menu-burger.svg">
+          <ul class="nav__menu nav__menu_hidden nav__menu_margin">
             <li class="menu__item menu__item_action">
               <a href="#about-us" class="menu__local-link">About us</a>
             </li>
@@ -38,6 +39,9 @@
               <a href="#join-us" class="menu__local-link">Join us</a>
             </li>
           </ul>
+          <div class="nav__animation-block">
+            <div class="animation__circle" style="display: none"></div>
+          </div>
         </nav>
         <div class="header__intro-section">
           <div class="intro-section__heading intro-section__headibg_transition intro-section__heading_top">
@@ -53,7 +57,7 @@
     </header>
     <main class="main">
       <section id="contact-form" class="section__contact-form">
-        <div class="wrapper">
+        <div class="wrapper wrapper_mobile-flex">
           <div class="contact-form">
             <form action="/" class="form">
               <div class="form-wrapper">
@@ -90,53 +94,31 @@
                   Send form
                 </button>
               </div>
-              <script>
-                $('#phone').mask('(999) 999-99-99');
-                const selectors = new Array(".form-phone__select-field", ".form-country__select-field")
-
-                function toogleVisibility(selector) {
-                  $(selector).toggleClass('form__select-field_hidden')
-                }
-
-                $(document).ready(() => {
-                  selectors.forEach((selector) => {
-                    let select_field = document.querySelector(selector)
-                    let select_input = select_field.querySelector(".form__select-option")
-
-                    select_field.querySelectorAll(".form__select-option").forEach((select_option) => {
-                      $(select_option).click(function(event) {
-                        $(select_input).attr("value", $(this).attr("value"))
-                        $(select_input).text($(this).attr("value"))
-                      })
-                    })
-                  })
-                })
-              </script>
             </form>
           </div>
           <div class="info-bars">
-            <details class="info-bar" open>
-              <summary class="info-bar__pointer">
+            <div class="info-bar info-bar_open">
+              <div class="info-bar__pointer">
                 <span class="info-bar__pointer-name"></span>
-              </summary>
+              </div>
               <div class="info-bar__content section_filter">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 At repellendus, dicta, ipsum placeat quae dignissimos quia
                 atque odio repudiandae est quibusdam illo nobis eligendi et
                 ipsam pariatur, molestiae ad explicabo?
               </div>
-            </details>
-            <details class="info-bar">
-              <summary class="info-bar__pointer">
+            </div>
+            <div class="info-bar">
+              <div class="info-bar__pointer">
                 <span class="info-bar__pointer-name"></span>
-              </summary>
+              </div>
               <div class="info-bar__content section_filter">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 At repellendus, dicta, ipsum placeat quae dignissimos quia
                 atque odio repudiandae est quibusdam illo nobis eligendi et
                 ipsam pariatur, molestiae ad explicabo?
               </div>
-            </details>
+            </div>
           </div>
         </div>
       </section>
@@ -144,14 +126,16 @@
         <div class="wrapper wrapper_column">
           <div class="section__description developers__decription">
             <h1 class="section__heading">Developers</h1>
-            <div class="section__content">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Corporis reprehenderit id in temporibus consequatur deserunt
-              consectetur facere minima illo impedit, illum odit amet voluptas,
-              rem quod modi doloribus! Tempore, expedita.
+            <div class="section__content-wrapper">
+              <div class="section__content">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis reprehenderit id in temporibus consequatur deserunt
+                consectetur facere minima illo impedit, illum odit amet voluptas,
+                rem quod modi doloribus! Tempore, expedita.
+              </div>
             </div>
           </div>
-          <div class="swiper-developers section__slider">
+          <div class="swiper-developers section__slider section__slider_width">
             <div class="swiper-wrapper slider__list">
               {% for _ in [1, 2, 3, 4, 5, 6] %}
                 {% include "dev_card.html"%}
@@ -166,11 +150,13 @@
           <div class="section__description about-us__description section__description_flex">
             <div class="wrapper-description wrapper-description__about-us">
               <h1 class="section__heading">About us</h1>
-              <div class="section__content section__content_big-line-h">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis reprehenderit id in temporibus consequatur deserunt
-                consectetur facere minima illo impedit, illum odit amet voluptas,
-                rem quod modi doloribus! Tempore, expedita.
+              <div class="section__content-wrapper">
+                <div class="section__content section__content_big-line-h">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis reprehenderit id in temporibus consequatur deserunt
+                  consectetur facere minima illo impedit, illum odit amet voluptas,
+                  rem quod modi doloribus! Tempore, expedita.
+                </div>
               </div>
             </div>
             <img class="section__image" src="/static/assets/images/backgrounds/illustration-1.jpg" alt="Illustration-1">
@@ -180,13 +166,13 @@
               <li class="action-nav__item">
                 <a class="action-nav__link">Send us tech-task</a>
               </li>
-              <li class="action-nav__item">
+              <li class="action-nav__item action-nav__item_icon">
                 <span class="action-nav__icon action-nav__icon_send"></span>
               </li>
               <li class="action-nav__item">
                 <a class="action-nav__link">Wait a bit before our call</a>
               </li>
-              <li class="action-nav__item">
+              <li class="action-nav__item action-nav__item_icon">
                 <span class="action-nav__icon action-nav__icon_phone"></span>
               </li>
               <li class="action-nav__item">
@@ -220,11 +206,13 @@
         <div class="wrapper wrapper_column">
           <div class="section__description products__description">
               <h1 class="section__heading">Products</h1>
-              <div class="section__content">
+              <div class="section__content-wrapper">
+                <div class="section__content">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Corporis reprehenderit id in temporibus consequatur deserunt
                   consectetur facere minima illo impedit, illum odit amet voluptas,
                   rem quod modi doloribus! Tempore, expedita.
+                </div>
               </div>
           </div>
           <div class="swiper-products section__slider">
@@ -259,80 +247,29 @@
                     <a href="#" class="action-point__link">
                       Send us your portfolio
                     </a>
-                    <span hidden>Send us your<br> portfolio</span>
                     <span class="action-point__icon"></span>
                   </li>
                   <li class="action-point__item">
                     <a href="#" class="action-point__link">
                       Connect with customer
                     </a>
-                    <span hidden>Connect with<br> customer</span>
                     <span class="action-point__icon"></span>
                   </li>
                   <li class="action-point__item">
                     <a href="#" class="action-point__link">
                       Get your fast money
                     </a>
-                    <span hidden>Get your<br> fast money</span>
                     <span class="action-point__icon"></span>
                   </li>
                 </ul>
-                <script>
-                  function getWordBeforeWrap(el) {
-
-                    let current = $(el)
-                    let words = current.text().split(' ');
-                    let word;
-
-                    current.text(words[0]);
-                    let height = current.height();
-
-                    for(let i = 1; i < words.length; i++){
-                        current.text(current.text() + ' ' + words[i]);
-
-                        if(current.height() > height){
-                            height = current.height();
-                            word = words[i-1]
-                        }
-                    }
-                    return word
-                  }
-
-                  function setObserver(element) {
-                    const resizeObserver = new ResizeObserver(() => {
-                      let word = getWordBeforeWrap(element)
-                      let text;
-
-                      if (word !== undefined) {
-                        console.log(word)
-                        text = element.innerText.replace(word, word + "<br>")
-                      }
-
-                      if (text !== undefined) {
-                        element.innerHTML = text
-                      }
-                      element.prevHeight = element.clientHeight
-                    });
-
-                    resizeObserver.observe(element);
-                  }
-
-                  $(document).ready(() => {
-                    const links = document.querySelectorAll(".action-point__link")
-
-                    links.forEach((link) => {
-                      setObserver(link)
-                    })
-                  })
-                </script>
               </div>
               <div class="action-point action-point_margin">
                 <div class="form__block form-block_width form-block_border-and-color">
-                  <label class="form__field-placeholder" for="portfolio">Select file with works</label>
+                  <label class="form__field-placeholder form__field-placeholder_font" for="portfolio">Select file with works</label>
                   <input class="form__field" id="portfolio" name="file" style="display: none;" type="file">
-                  <label class="form__field-label" for="portfolio"></label>
+                  <label class="form__field-label form__field-label_marker" for="portfolio"></label>
                 </div>
-                <label class="form__field-label" for="join-us-button">AND</label>
+                <label class="form__field-label form__field-label_text" for="join-us-button">AND</label>
                 <input class="form__submit-button" id="join-us-button" type="submit" value="Join us">
               </div>
             </form>
