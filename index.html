@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="public">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalise.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/media.css">
+    <link rel="shortcut icon" type="image/png" sizes="125x125" href="./images/backgrounds/shortcut.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./scripts/modules/phone-mask.js"></script>
+    <title>ASQ - IT-company</title>
+  </head>
+  <body class="hide-content">
+    <header class="header">
+      <div class="wrapper wrapper_column">
+        <nav class="header__nav header__nav_margin">
+          <div class="logo">
+            <img class="logo-image" src="./images/backgrounds/Light-logo.png" alt="Logotype">
+          </div>
+          <img class="nav__burger" src="./images/icons/menu-burger.svg">
+          <ul class="nav__menu nav__menu_hidden nav__menu_margin">
+            <li class="menu__item menu__item_action">
+              <a href="#about-us" class="menu__local-link">About us</a>
+            </li>
+            <li class="menu__item menu__item_action">
+              <a href="#products" class="menu__local-link">Products</a>
+            </li>
+            <li class="menu__item menu__item_action">
+              <a href="#contact-us" class="menu__local-link">Contact us</a>
+            </li>
+            <li class="menu__item menu__item_action">
+              <a href="#developers" class="menu__local-link">Developers</a>
+            </li>
+            <li class="menu__item menu__item_action">
+              <a href="#join-us" class="menu__local-link">Join us</a>
+            </li>
+          </ul>
+          <div class="nav__animation-block">
+            <div class="animation__circle" style="display: none"></div>
+          </div>
+        </nav>
+        <div class="header__intro-section">
+          <div class="intro-section__heading intro-section__heading_transition intro-section__heading_top">
+            Bold IT solutions<br>
+            <span class="last-line">Hire us to solve any case</span>
+          </div>
+          <div class="intro-section__heading intro-section__heading_transition intro-section__heading_bottom">
+            Highlight your business<br>
+            <span class="last-line">with high-tech development</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section id="contact-form" class="section__contact-form">
+        <div class="wrapper wrapper_mobile-flex">
+          <div class="contact-form">
+            <form action="/static" class="form">
+              <div class="form-wrapper">
+                <div class="form-block">
+                  <input class="form__field" name="name" placeholder="Type your name" type="text">
+                </div>
+                <div class="form-block">
+                  <ul class="form__select-field form-country__select-field form__select-field_hidden" onclick="toogleVisibility(this)">
+                    <li class="form__select-option">Select your country</li>
+                    <li class="form__select-option" value="Russia">Russia</li>
+                    <li class="form__select-option" value="Ukraine">Ukraine</li>
+                    <li class="form__select-option" value="Belarus">Belarus</li>
+                    <li class="form__select-option" style="height: 0; overflow: hidden">Select your country</li>
+                  </ul>
+                  <span class="form__arrow" onclick="toogleVisibility('.form-country__select-field')"></span>
+                </div>
+                <div class="form-block">
+                  <span class="form__arrow form__phone-arrow" onclick="toogleVisibility('.form-phone__select-field')"></span>
+                  <ul class="form__select-field form-phone__select-field form__select-field_hidden" onclick="toogleVisibility(this)">
+                    <li class="form__select-option">+7</li>
+                    <li class="form__select-option" value="+7">+7</li>
+                    <li class="form__select-option" value="+12">+12</li>
+                    <li class="form__select-option" value="+88">+88</li>
+                    <li class="form__select-option" style="height: 0; overflow: hidden">+7</li>
+                  </ul>
+                  <input class="form__field form__field_font-smaller" id="phone" name="phone" placeholder="(___) ___-__-__" type="text">
+                </div>
+                <div class="form-block form-block_cursor">
+                  <label class="form__field-placeholder" for="task-file">Select file with task</label>
+                  <input class="form__field" id="task-file" name="file" style="display: none;" type="file">
+                  <label class="form__field-label form__field-label_marker" for="task-file"></label>
+                </div>
+                <button class="send-form__button" value="Send form" type="button">
+                  Send form
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="info-bars">
+            <div class="info-bar info-bar_open">
+              <div class="info-bar__pointer">
+                <span class="info-bar__pointer-name"></span>
+              </div>
+              <div class="info-bar__content section_filter">
+                It is just a cool demo page, that shows my
+                frontend skills and possible products. All the
+                forms does not send anything to any server. Do not mind
+                clicking on anything to test animations.
+              </div>
+            </div>
+            <div class="info-bar">
+              <div class="info-bar__pointer">
+                <span class="info-bar__pointer-name"></span>
+              </div>
+              <div class="info-bar__content section_filter">
+                However telegram link, phone and other contact
+                information is valid and relates to me. Do not
+                mind calling.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="developers" class="section__developers section_filter">
+        <div class="wrapper wrapper_column">
+          <div class="section__description developers__decription">
+            <h1 class="section__heading">Developers</h1>
+            <div class="section__content-wrapper">
+              <div class="section__content">
+                These are me and my friends. We are the prime
+                team of developers... I have friends they just refused to show faces in public.
+              </div>
+            </div>
+          </div>
+          <div class="swiper-developers section__slider section__slider_width">
+            <div class="swiper-wrapper slider__list">
+              <div class="swiper-slide slider__item">
+                <div class="item__image">
+                </div>
+                <div class="item__border">
+                  <img class="item__border-image" src="./images/icons/ratio.svg">
+                  <div class="item__content">
+                    <div class="item__badge">
+                      <svg class="item__badge-image" viewbox="0 0 209 190" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                        <path d="M104.448,62.0022C97.5799,62.0022,92,59.3104,92,49.419v-38.5497c0-9.916742,5.5799-10.869056,12.448-10.869056c6.867,0,12.434.952314,12.434,10.869056v38.5497c0,9.8914-5.567,12.5832-12.434,12.5832Z" clip-rule="evenodd" fill="#6c70b9" fill-rule="evenodd"/>
+                        <path d="M130.768,50.0002l.761,7.833c0,15.131-12.099,19.0666-27.029,19.0666-14.9558,0-27.095-3.9356-27.095-19.0666v-7.0433L26.34,50.0002C11.7782,50.0002,0,61.0683,0,75.4733v89.1557C0,179.047,11.765,190,26.34,190h156.359C197.209,190,209,178.308,209,163.89v-86.9902c0-14.405-11.778-26.1099-26.301-26.1099l-51.931-.7897ZM71.6683,88.2099c10.8703,0,19.7077,8.7576,19.7077,19.5591c0,10.777-8.8374,31.387-19.7077,31.387-10.8704,0-19.6842-20.621-19.6842-31.387.0118-10.8015,8.8256-19.5591,19.6842-19.5591ZM117.408,164.629h-91.6633c0,0-1.5727-25.311,21.9552-25.311c4.8958,7.303,11.6561,14.339,24.0859,14.339c12.4552,0,18.3657-7.082,23.2488-14.501c26.4704.012,22.3734,25.473,22.3734,25.473Zm65.882-.535h-52.522v-12.736h69.592v12.736h-17.07Zm0-25.524h-52.522v-12.736h69.592v12.736h-17.07Zm0-25.422h-52.522v-12.737h69.592v12.737h-17.07Z" clip-rule="evenodd" fill="#6c70b9" fill-rule="evenodd"/>
+                        <text dx="0" dy="0" font-size="9.975" font-weight="400" transform="translate(133.511039 150.857413)" stroke-width="0">
+                          <tspan y="9.975" font-weight="400" stroke-width="0">
+                            <![CDATA[
+                              Бэлэнеску
+                            ]]>
+                          </tspan>
+                        </text>
+                        <text dx="0" dy="0" font-size="9.975" font-weight="400" transform="translate(133.51104 125.416961)" stroke-width="0">
+                          <tspan y="9.975" font-weight="400" stroke-width="0">
+                            <![CDATA[
+                              Богдан
+                            ]]>
+                          </tspan>
+                          <tspan x="0" y="29.925" font-weight="400" stroke-width="0">
+                            <![CDATA[
+
+                            ]]>
+                          </tspan>
+                        </text>
+                        <text dx="0" dy="0" font-size="9.975" font-weight="400" transform="translate(133.51104 100.422833)" stroke-width="0">
+                          <tspan y="9.975" font-weight="400" stroke-width="0">
+                            <![CDATA[
+                              Викторович
+                            ]]>
+                          </tspan>
+                          <tspan x="0" y="29.925" font-weight="400" stroke-width="0">
+                            <![CDATA[
+
+                            ]]>
+                          </tspan>
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="item__description">
+                      Fullstack-developer<br>
+                      Experience - 3 years<br>
+                      Tech stack: Python,<br>
+                      FastAPI; JS, React;
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slider__item">
+                <div class="item__image">
+                </div>
+                <div class="item__border">
+                  <img class="item__border-image" src="./images/icons/ratio.svg">
+                  <div class="item__content">
+                    <div class="item__badge">
+                      <svg class="item__badge-image" viewbox="0 0 209 190" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                        <path d="M104.448,62.0022C97.5799,62.0022,92,59.3104,92,49.419v-38.5497c0-9.916742,5.5799-10.869056,12.448-10.869056c6.867,0,12.434.952314,12.434,10.869056v38.5497c0,9.8914-5.567,12.5832-12.434,12.5832Z" clip-rule="evenodd" fill="#6c70b9" fill-rule="evenodd"/>
+                        <path d="M130.768,50.0002l.761,7.833c0,15.131-12.099,19.0666-27.029,19.0666-14.9558,0-27.095-3.9356-27.095-19.0666v-7.0433L26.34,50.0002C11.7782,50.0002,0,61.0683,0,75.4733v89.1557C0,179.047,11.765,190,26.34,190h156.359C197.209,190,209,178.308,209,163.89v-86.9902c0-14.405-11.778-26.1099-26.301-26.1099l-51.931-.7897ZM71.6683,88.2099c10.8703,0,19.7077,8.7576,19.7077,19.5591c0,10.777-8.8374,31.387-19.7077,31.387-10.8704,0-19.6842-20.621-19.6842-31.387.0118-10.8015,8.8256-19.5591,19.6842-19.5591ZM117.408,164.629h-91.6633c0,0-1.5727-25.311,21.9552-25.311c4.8958,7.303,11.6561,14.339,24.0859,14.339c12.4552,0,18.3657-7.082,23.2488-14.501c26.4704.012,22.3734,25.473,22.3734,25.473Zm65.882-.535h-52.522v-12.736h69.592v12.736h-17.07Zm0-25.524h-52.522v-12.736h69.592v12.736h-17.07Zm0-25.422h-52.522v-12.737h69.592v12.737h-17.07Z" clip-rule="evenodd" fill="#6c70b9" fill-rule="evenodd"/>
+                        <text dx="0" dy="0" font-size="9.975" font-weight="400" transform="translate(133.511039 150.857413)" stroke-width="0">
+                          <tspan y="9.975" font-weight="400" stroke-width="0">
+                            <![CDATA[
+                              Бэлэнеску
+                            ]]>
+                          </tspan>
+                        </text>
+                        <text dx="0" dy="0" font-size="9.975" font-weight="400" transform="translate(133.51104 125.416961)" stroke-width="0">
+                          <tspan y="9.975" font-weight="400" stroke-width="0">
+                            <![CDATA[
+                              Богдан
+                            ]]>
+                          </tspan>
+                          <tspan x="0" y="29.925" font-weight="400" stroke-width="0">
+                            <![CDATA[
+
+                            ]]>
+                          </tspan>
+                        </text>
+                        <text dx="0" dy="0" font-size="9.975" font-weight="400" transform="translate(133.51104 100.422833)" stroke-width="0">
+                          <tspan y="9.975" font-weight="400" stroke-width="0">
+                            <![CDATA[
+                              Викторович
+                            ]]>
+                          </tspan>
+                          <tspan x="0" y="29.925" font-weight="400" stroke-width="0">
+                            <![CDATA[
+
+                            ]]>
+                          </tspan>
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="item__description">
+                      Fullstack-developer<br>
+                      Experience - 3 years<br>
+                      Tech stack: Python,<br>
+                      FastAPI; JS, React;
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slider__item">
+                <div class="item__image">
+                </div>
+                <div class="item__border">
+                  <img class="item__border-image" src="./images/icons/ratio.svg">
+                  <div class="item__content">
+                    <div class="item__badge">
+                      <svg class="item__badge-image" viewbox="0 0 209 190" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                        <path d="M104.448,62.0022C97.5799,62.0022,92,59.3104,92,49.419v-38.5497c0-9.916742,5.5799-10.869056,12.448-10.869056c6.867,0,12.434.952314,12.434,10.869056v38.5497c0,9.8914-5.567,12.5832-12.434,12.5832Z" clip-rule="evenodd" fill="#6c70b9" fill-rule="evenodd"/>
+                        <path d="M130.768,50.0002l.761,7.833c0,15.131-12.099,19.0666-27.029,19.0666-14.9558,0-27.095-3.9356-27.095-19.0666v-7.0433L26.34,50.0002C11.7782,50.0002,0,61.0683,0,75.4733v89.1557C0,179.047,11.765,190,26.34,190h156.359C197.209,190,209,178.308,209,163.89v-86.9902c0-14.405-11.778-26.1099-26.301-26.1099l-51.931-.7897ZM71.6683,88.2099c10.8703,0,19.7077,8.7576,19.7077,19.5591c0,10.777-8.8374,31.387-19.7077,31.387-10.8704,0-19.6842-20.621-19.6842-31.387.0118-10.8015,8.8256-19.5591,19.6842-19.5591ZM117.408,164.629h-91.6633c0,0-1.5727-25.311,21.9552-25.311c4.8958,7.303,11.6561,14.339,24.0859,14.339c12.4552,0,18.3657-7.082,23.2488-14.501c26.4704.012,22.3734,25.473,22.3734,25.473Zm65.882-.535h-52.522v-12.736h69.592v12.736h-17.07Zm0-25.524h-52.522v-12.736h69.592v12.736h-17.07Zm0-25.422h-52.522v-12.737h69.592v12.737h-17.07Z" clip-rule="evenodd" fill="#6c70b9" fill-rule="evenodd"/>
+                        <text dx="0" dy="0" font-size="9.975" font-weight="400" transform="translate(133.511039 150.857413)" stroke-width="0">
+                          <tspan y="9.975" font-weight="400" stroke-width="0">
+                            <![CDATA[
+                              Бэлэнеску
+                            ]]>
+                          </tspan>
+                        </text>
+                        <text dx="0" dy="0" font-size="9.975" font-weight="400" transform="translate(133.51104 125.416961)" stroke-width="0">
+                          <tspan y="9.975" font-weight="400" stroke-width="0">
+                            <![CDATA[
+                              Богдан
+                            ]]>
+                          </tspan>
+                          <tspan x="0" y="29.925" font-weight="400" stroke-width="0">
+                            <![CDATA[
+
+                            ]]>
+                          </tspan>
+                        </text>
+                        <text dx="0" dy="0" font-size="9.975" font-weight="400" transform="translate(133.51104 100.422833)" stroke-width="0">
+                          <tspan y="9.975" font-weight="400" stroke-width="0">
+                            <![CDATA[
+                              Викторович
+                            ]]>
+                          </tspan>
+                          <tspan x="0" y="29.925" font-weight="400" stroke-width="0">
+                            <![CDATA[
+
+                            ]]>
+                          </tspan>
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="item__description">
+                      Fullstack-developer<br>
+                      Experience - 3 years<br>
+                      Tech stack: Python,<br>
+                      FastAPI; JS, React;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="swiper-scrollbar slider__scroller"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about-us" class="section__about-us">
+        <div class="wrapper wrapper_column">
+          <div class="section__description about-us__description section__description_flex">
+            <div class="wrapper-description wrapper-description__about-us">
+              <h1 class="section__heading">About me</h1>
+              <div class="section__content-wrapper">
+                <div class="section__content section__content_big-line-h">
+                  All the tech staff in CV. I really have no idea what to write here.
+                  Let this text be a custom lorem placeholder.
+                </div>
+              </div>
+            </div>
+            <img class="section__image" src="./images/backgrounds/illustration-1.jpg" alt="Illustration-1">
+          </div>
+          <nav class="section__action-nav">
+            <ul class="action-nav__list">
+              <li class="action-nav__item">
+                <a class="action-nav__link">Send us tech-task</a>
+              </li>
+              <li class="action-nav__item action-nav__item_icon">
+                <span class="action-nav__icon action-nav__icon_send"></span>
+              </li>
+              <li class="action-nav__item">
+                <a class="action-nav__link">Wait a bit before our call</a>
+              </li>
+              <li class="action-nav__item action-nav__item_icon">
+                <span class="action-nav__icon action-nav__icon_phone"></span>
+              </li>
+              <li class="action-nav__item">
+                <a class="action-nav__link">Get the solution!</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section id="contact-us" class="section__contact-us">
+        <div class="wrapper wrapper_spread-and-center">
+          <div class="section__description contact-us__description">
+            <div class="wrapper-description wrapper-description__contact-us">
+              <h1 class="section__heading contact-us__heading">Contacts</h1>
+              <ul class="section__contact-list">
+                <li class="contact-list__item">
+                  <a class="contact-list__link contact-list__link_phone" href="tel:+79997977119">Phone: +7(999)797-71-19</a>
+                </li>
+                <li class="contact-list__item">
+                  <a class="contact-list__link contact-list__link_tg" href="https://t.me/NoPasaRun">TG: @NoPasaRun</a>
+                </li>
+                <li class="contact-list__item">
+                  <a class="contact-list__link contact-list__link_email" href="mailto:bogdanbelenesku@gmail.com">Gmail: bogdanbelenesku</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="products" class="section__products section_filter">
+        <div class="wrapper wrapper_column">
+          <div class="section__description products__description">
+              <h1 class="section__heading">Products</h1>
+              <div class="section__content-wrapper">
+                <div class="section__content">
+                  These are potential products that we might do for you.
+                </div>
+              </div>
+          </div>
+          <div class="swiper-products section__slider">
+            <div class="swiper-wrapper slider__list">
+              <div class="swiper-slide slider__product">
+                <img class="product__icon" src="images/icons/discord.svg">
+                <div class="product__content">
+                  <div class="product__description">
+                    <div class="product__heading">
+                      <strong class="product__heading-text">Discord bot</strong>
+                    </div>
+                    <div class="product__description-content">
+                      Music bots, channel management,
+                      creating and attaching roles, etc.
+                    </div>
+                  </div>
+                  <div class="product__extra-info">
+                      15$ / hour
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slider__product">
+                <img class="product__icon" src="images/icons/telegram.svg">
+                <div class="product__content">
+                  <div class="product__description">
+                    <div class="product__heading">
+                      <strong class="product__heading-text">Telegram bot</strong>
+                    </div>
+                    <div class="product__description-content">
+                      Market bot, group management, spam bots,
+                      other specific staff.
+                    </div>
+                  </div>
+                  <div class="product__extra-info">
+                      15$ / hour
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slider__product">
+                <img class="product__icon" src="images/icons/api.svg">
+                <div class="product__content">
+                  <div class="product__description">
+                    <div class="product__heading">
+                      <strong class="product__heading-text">Web api</strong>
+                    </div>
+                    <div class="product__description-content">
+                      Integrating into any of
+                      systems that use http/https
+                      protocols.
+                    </div>
+                  </div>
+                  <div class="product__extra-info">
+                      200 - 400 $
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slider__product">
+                  <img class="product__icon" src="images/icons/website.svg">
+                  <div class="product__content">
+                    <div class="product__description">
+                      <div class="product__heading">
+                        <strong class="product__heading-text">Website</strong>
+                      </div>
+                      <div class="product__description-content">
+                        Multi-page websites, commerce websites,
+                        single page applications, etc.
+                        No cms, manual labor.
+                      </div>
+                    </div>
+                    <div class="product__extra-info">
+                        200 - 400 $
+                    </div>
+                  </div>
+              </div>
+              <div class="swiper-slide slider__product">
+                  <img class="product__icon" src="images/icons/parser.svg">
+                  <div class="product__content">
+                    <div class="product__description">
+                      <div class="product__heading">
+                        <strong class="product__heading-text">Web parser</strong>
+                      </div>
+                      <div class="product__description-content">
+                        Do some fucking stuff
+                        I don’t know actually
+                        what it does
+                      </div>
+                    </div>
+                    <div class="product__extra-info">
+                        200 - 400 $
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar slider__scroller"></div>
+          </div>
+        </div>
+      </section>
+      <section id="join-us" class="section__join-us">
+        <div class="wrapper wrapper_column">
+          <div class="section__description join-us__description section__description_flex">
+            <h1 class="section__heading section__heading_dark-theme-and-low-size">Join us</h1>
+            <div class="section__content">
+              <strong class="section__description-text">
+                describe your abilities,<br>
+                leave links and etc.
+              </strong>
+            </div>
+          </div>
+          <div class="join-us__form">
+            <form action="#" class="form form_flex">
+              <div class="form__top-wrapper">
+                <div class="form__block form-block_width form__block_background form__block_margin">
+                  <textarea class="form__field" name="text-data" placeholder="Type here"></textarea>
+                </div>
+                <ul class="action-point__list">
+                  <li class="action-point__item">
+                    <a href="#" class="action-point__link">
+                      Send us your portfolio
+                    </a>
+                    <span class="action-point__icon"></span>
+                  </li>
+                  <li class="action-point__item">
+                    <a href="#" class="action-point__link">
+                      Connect with customer
+                    </a>
+                    <span class="action-point__icon"></span>
+                  </li>
+                  <li class="action-point__item">
+                    <a href="#" class="action-point__link">
+                      Get your fast money
+                    </a>
+                    <span class="action-point__icon"></span>
+                  </li>
+                </ul>
+              </div>
+              <div class="action-point action-point_margin">
+                <div class="form__block form-block_width form-block_border-and-color">
+                  <label class="form__field-placeholder form__field-placeholder_font" for="portfolio">Select file with works</label>
+                  <input class="form__field" id="portfolio" name="file" style="display: none;" type="file">
+                  <label class="form__field-label form__field-label_marker" for="portfolio"></label>
+                </div>
+                <label class="form__field-label form__field-label_text" for="join-us-button">AND</label>
+                <input class="form__submit-button" id="join-us-button" type="submit" value="Join us">
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="header__nav footer_nav footer__nav_margin">
+          <div class="logo">
+            <img class="logo-image" src="./images/backgrounds/Dark-logo.png" alt="Logotype">
+          </div>
+          <ul class="nav__menu">
+            <li class="menu__item">
+              <a href="#" class="menu__local-link menu__local-link_dark-color">Politics</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__local-link menu__local-link_dark-color">Author rights</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__local-link menu__local-link_dark-color">User permissions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="audio-player" style="display: none;">
+      <audio id="synthwave-audio-player" autoplay></audio>
+      <button class="audio-player__button">Play</button>
+    </div>
+    <span class="cursor"></span>
+    <script src="./scripts/cursor.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script>
+      sendPlaySoundOrGetHeaders()
+      // const audio_player = document.querySelector("#synthwave-audio-player")
+      // const audio_player_button = document.querySelector(".audio-player__button")
+
+      // if (play_sound) {
+      //   LaunchRandomAudio()
+      // }
+    </script>
+  </body>
+</html>

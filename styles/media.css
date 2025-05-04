@@ -347,7 +347,7 @@
   .form__arrow::after {
     position: absolute;
     content: "";
-    background-image: url('/static/assets/images/icons/file.svg');
+    background-image: url('../images/icons/file.svg');
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -358,7 +358,7 @@
   }
 
   .form__arrow::after {
-    background-image: url('/static/assets/images/icons/arrow.svg');;
+    background-image: url('../images/icons/arrow.svg');;
     transform: translateY(-2px);
     margin-right: 0;
   }
@@ -528,7 +528,7 @@
 
   .action-point__icon,
   .action-point__item::before {
-    background-image: url('/static/assets/images/icons/long-arrow.svg');
+    background-image: url('../images/icons/long-arrow.svg');
     background-size: contain;
     background-position: right center;
     background-repeat: no-repeat;
@@ -536,7 +536,7 @@
   }
 
   .action-point__item::before {
-    background-image: url('/static/assets/images/icons/dot.svg');
+    background-image: url('../images/icons/dot.svg');
     background-size: contain;
     width: 4vw;
   }
@@ -834,7 +834,7 @@
 
   .action-point__item::before {
     content: "";
-    background-image: url("/static/assets/images/icons/dot.svg");
+    background-image: url("../images/icons/dot.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

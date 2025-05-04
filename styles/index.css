@@ -2,28 +2,28 @@
 
 @font-face {
   font-family: 'Retro';
-  src: url('/static/assets/fonts/NewZelek.ttf') format('truetype');
+  src: url('../fonts/NewZelek.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Terminator';
-  src: url('/static/assets/fonts/TerminatorTwo.woff');
+  src: url('../fonts/TerminatorTwo.woff');
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Terra';
-  src: url('/static/assets/fonts/Teroxia-Regular.woff2');
+  src: url('../fonts/Teroxia-Regular.woff2');
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Machine';
-  src: url('/static/assets/fonts/MachineGunk-nyqg.ttf') format('truetype');
+  src: url('../fonts/MachineGunk-nyqg.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
 }
@@ -213,7 +213,7 @@ select {
   position: absolute;
   display: inline-block;
   content: "";
-  background-image: url("/static/assets/images/icons/cross.svg");
+  background-image: url("../images/icons/cross.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 25px;
@@ -299,7 +299,7 @@ select {
   right: 0;
   max-width: 1920px;
   height: 100vh;
-  background-image: url('/static/assets/images/backgrounds/intro.png');
+  background-image: url('../images/backgrounds/intro.png');
   background-size: cover;
   background-position: center;
   margin-left: auto;
@@ -457,7 +457,7 @@ select {
   letter-spacing: 4px;
 }
 
-.intro-section__headibg_transition {
+.intro-section__heading_transition {
   transition-duration: 3s;
   transition-timing-function: cubic-bezier(0,.66,.97,1.03);
   transition-property: text-shadow;
@@ -507,7 +507,7 @@ select {
   content: "";
   top: -10%; bottom: -10%;
   left: -14%; right: -14%;
-  background: url("/static/assets/images/backgrounds/form.png");
+  background: url("../images/backgrounds/form.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -631,7 +631,7 @@ select {
 
 .form__arrow::after {
   display: inline-block;
-  content: url("/static/assets/images/icons/arrow.svg");
+  content: url("../images/icons/arrow.svg");
 }
 
 .form__phone-arrow::after {
@@ -641,7 +641,7 @@ select {
 
 .form__field-label_marker::after {
   display: inline-block;
-  content: url('/static/assets/images/icons/file.svg');
+  content: url('../images/icons/file.svg');
 }
 
 .form__field::placeholder {
@@ -737,7 +737,7 @@ select {
 }
 
 .info-bar__pointer::after {
-  content: url('/static/assets/images/icons/arrow.svg');
+  content: url('../images/icons/arrow.svg');
   display: inline-block;
   margin-left: 19px;
   transition: 0.25s transform ease-in-out;
@@ -913,7 +913,7 @@ select {
   border-radius: 100%;
   border: 5px solid var(--dark-purple);
   background-color: var(--light-lilac);
-  background-image: url("../assets/images/backgrounds/developer-1.jpg");
+  background-image: url("../images/backgrounds/developer-1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 200%;
@@ -955,7 +955,7 @@ select {
   content: "";
   position: absolute;
   display: inline-block;
-  background-image: url("../assets/images/icons/info.svg");
+  background-image: url("../images/icons/info.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   left: 40px;
@@ -1100,12 +1100,12 @@ select {
 }
 
 .action-nav__icon_send::after {
-  background-image: url('/static/assets/images/icons/plane.svg');
+  background-image: url('../images/icons/plane.svg');
   top: 4px;
 }
 
 .action-nav__icon_phone::after {
-  background-image: url('/static/assets/images/icons/phone.svg');
+  background-image: url('../images/icons/phone.svg');
   background-size: 55%;
 }
 
@@ -1131,11 +1131,11 @@ select {
 }
 
 .contact-us__description::before {
-  background-image: url("/static/assets/images/icons/left-circles.svg");
+  background-image: url("../images/icons/left-circles.svg");
 }
 
 .contact-us__description::after {
-  background-image: url("/static/assets/images/icons/right-circles.svg");
+  background-image: url("../images/icons/right-circles.svg");
   background-position: right top;
 }
 
@@ -1191,15 +1191,15 @@ select {
 }
 
 .contact-list__link_phone::before {
-  background-image: url("../assets/images/icons/phone-marker.svg");
+  background-image: url("../images/icons/phone-marker.svg");
 }
 
-.contact-list__link_vk::before {
-  background-image: url("../assets/images/icons/vk-marker.svg");
+.contact-list__link_tg::before {
+  background-image: url("../images/icons/tg-marker.svg");
 }
 
 .contact-list__link_email::before {
-  background-image: url("../assets/images/icons/email-marker.svg");
+  background-image: url("../images/icons/email-marker.svg");
 }
 
 .contact-list__link:active::before {
@@ -1267,13 +1267,14 @@ select {
 
 .product__icon {
   display: inline-block;
-  margin: 0 auto;
-  margin-bottom: 60px;
+  margin: 0 auto 20% auto;
   width: 24.4%;
+  aspect-ratio: 1 / 1;
 }
 
 .product__heading {
   margin-bottom: 48px;
+  min-width: max-content;
 }
 
 .product__heading-text {
@@ -1442,7 +1443,7 @@ select {
 }
 
 .action-point__item::before {
-  content: url('/static/assets/images/icons/dot.svg');
+  content: url('../images/icons/dot.svg');
   margin-right: 21px;
   transition: 1.5s transform cubic-bezier(.03,1.1,.24,.96);
 }
@@ -1481,7 +1482,7 @@ select {
 }
 
 .action-point__icon::after {
-  content: url('/static/assets/images/icons/long-arrow.svg');
+  content: url('../images/icons/long-arrow.svg');
 }
 
 /* File field and submit button decoration */
